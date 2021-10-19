@@ -10,7 +10,7 @@ if (isset($_POST['submit'])){
             $return = hash($function,$text);
             //I did that at the beginning for reducing the risk fo injection but finally it's way easier and
             //more readable to sanitize it
-            /*if ($function == "sha1"){
+            if ($function == "sha1"){
                 $return = hash("sha1",$text);
             }elseif ($function == "md2") {
                 $return = hash("md2", $text);
@@ -98,7 +98,7 @@ if (isset($_POST['submit'])){
                 $return = hash("haval224,5",$text);
             }elseif ($function == "haval256,5"){
                 $return = hash("haval256,5",$text);
-            }*/
+            }
         }else{
             $return =  'You are suppose to enter the text you want to hash in the text area.';
         }
